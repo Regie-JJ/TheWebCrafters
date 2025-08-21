@@ -1,0 +1,851 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fafafa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: #fff;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-brand h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.verified-badge {
+    background: #10b981;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #667eea;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary, .btn-outline {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+    background: #f8f9fa;
+    color: #333;
+    border: 1px solid #e9ecef;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn-outline:hover {
+    background: #667eea;
+    color: white;
+}
+
+.large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 2rem 80px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #ffd700, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    opacity: 0.8;
+}
+
+/* Featured Sneakers */
+.featured-sneakers {
+    padding: 80px 0;
+    background: white;
+}
+
+.featured-sneakers h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.sneaker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.sneaker-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.sneaker-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.sneaker-card.premium::before {
+    content: "PREMIUM";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ffd700;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.sneaker-card.limited::before {
+    content: "LIMITED";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff6b6b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.sneaker-card.exclusive::before {
+    content: "EXCLUSIVE";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #8b5cf6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.sneaker-card.luxury::before {
+    content: "LUXURY";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #1f2937;
+    color: #ffd700;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.sneaker-card.rare::before {
+    content: "RARE";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #10b981;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.sneaker-image {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sneaker-visual {
+    position: relative;
+    transform: rotate(-15deg);
+    transition: transform 0.3s;
+}
+
+.sneaker-card:hover .sneaker-visual {
+    transform: rotate(-10deg) scale(1.05);
+}
+
+/* Air Jordan Styles */
+.air-jordan {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+
+.jordan-body {
+    width: 180px;
+    height: 80px;
+    background: linear-gradient(45deg, #fff, #f1f2f6);
+    border-radius: 40px 10px 30px 50px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.jordan-sole {
+    width: 190px;
+    height: 25px;
+    background: linear-gradient(45deg, #2f3542, #57606f);
+    border-radius: 95px;
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+}
+
+.jordan-laces {
+    width: 60px;
+    height: 40px;
+    background: repeating-linear-gradient(45deg, #333, #333 2px, transparent 2px, transparent 8px);
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    border-radius: 10px;
+}
+
+.jumpman-logo {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #ff6b6b;
+}
+
+/* Yeezy Styles */
+.yeezy {
+    background: linear-gradient(135deg, #a4b0be, #747d8c);
+}
+
+.yeezy-body {
+    width: 170px;
+    height: 70px;
+    background: linear-gradient(45deg, #f1f2f6, #ddd);
+    border-radius: 85px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.yeezy-sole {
+    width: 180px;
+    height: 30px;
+    background: linear-gradient(45deg, #fff, #f8f9fa);
+    border-radius: 90px;
+    position: absolute;
+    bottom: -15px;
+    left: -5px;
+}
+
+.yeezy-stripe {
+    width: 120px;
+    height: 8px;
+    background: #ff6b6b;
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    border-radius: 4px;
+}
+
+.yeezy-pattern {
+    width: 100px;
+    height: 50px;
+    background: repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(0,0,0,0.1) 3px, rgba(0,0,0,0.1) 6px);
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    border-radius: 25px;
+}
+
+/* Off-White Styles */
+.off-white {
+    background: linear-gradient(135deg, #2f3542, #57606f);
+}
+
+.offwhite-body {
+    width: 175px;
+    height: 75px;
+    background: linear-gradient(45deg, #fff, #f8f9fa);
+    border-radius: 35px 15px 25px 45px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border: 2px solid #333;
+}
+
+.offwhite-sole {
+    width: 185px;
+    height: 28px;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    border-radius: 92px;
+    position: absolute;
+    bottom: -12px;
+    left: -5px;
+}
+
+.offwhite-tag {
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    background: #333;
+    color: white;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+.offwhite-zip {
+    width: 40px;
+    height: 3px;
+    background: #333;
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    border-radius: 2px;
+}
+
+/* Travis Scott Styles */
+.travis {
+    background: linear-gradient(135deg, #8b4513, #a0522d);
+}
+
+.travis-body {
+    width: 180px;
+    height: 80px;
+    background: linear-gradient(45deg, #8b4513, #a0522d);
+    border-radius: 40px 10px 30px 50px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.travis-sole {
+    width: 190px;
+    height: 25px;
+    background: linear-gradient(45deg, #2f3542, #57606f);
+    border-radius: 95px;
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+}
+
+.travis-swoosh {
+    width: 30px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    border-radius: 50% 0 50% 50%;
+    transform: rotate(-20deg);
+}
+
+.cactus-jack {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+}
+
+/* Dior Styles */
+.dior {
+    background: linear-gradient(135deg, #e8e8e8, #d1d1d1);
+}
+
+.dior-body {
+    width: 175px;
+    height: 75px;
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    border-radius: 35px 15px 25px 45px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.dior-sole {
+    width: 185px;
+    height: 28px;
+    background: linear-gradient(45deg, #333, #2f3542);
+    border-radius: 92px;
+    position: absolute;
+    bottom: -12px;
+    left: -5px;
+}
+
+.dior-pattern {
+    width: 120px;
+    height: 50px;
+    background: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(200,200,200,0.5) 5px, rgba(200,200,200,0.5) 10px);
+    position: absolute;
+    top: 12px;
+    left: 25px;
+    border-radius: 25px;
+}
+
+.dior-logo {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Fragment Styles */
+.fragment {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+}
+
+.fragment-body {
+    width: 180px;
+    height: 80px;
+    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+    border-radius: 40px 10px 30px 50px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.fragment-sole {
+    width: 190px;
+    height: 25px;
+    background: linear-gradient(45deg, #fff, #f8f9fa);
+    border-radius: 95px;
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+}
+
+.fragment-lightning {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+
+.fragment-text {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Sneaker Info */
+.sneaker-info {
+    padding: 1.5rem;
+}
+
+.sneaker-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.brand {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.price-section {
+    margin-bottom: 1.5rem;
+}
+
+.current-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    display: block;
+}
+
+.buyback-price {
+    font-size: 0.9rem;
+    color: #10b981;
+    font-weight: 600;
+}
+
+.sneaker-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.sneaker-actions .btn-primary,
+.sneaker-actions .btn-outline {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+}
+
+/* Buy-Back Section */
+.buyback-section {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 80px 0;
+}
+
+.buyback-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.buyback-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.buyback-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.buyback-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.buyback-features li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.guarantee-badge {
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.guarantee-badge span {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.guarantee-badge p {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Sell Section */
+.sell-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.sell-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.sell-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+.step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.step p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background: #1f2937;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-brand p {
+    opacity: 0.8;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.link-group h4 {
+    margin-bottom: 1rem;
+    color: #f9fafb;
+}
+
+.link-group a {
+    display: block;
+    color: #d1d5db;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.link-group a:hover {
+    color: #667eea;
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 2rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .sneaker-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .buyback-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sneaker-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.sneaker-card:nth-child(2) { animation-delay: 0.1s; }
+.sneaker-card:nth-child(3) { animation-delay: 0.2s; }
+.sneaker-card:nth-child(4) { animation-delay: 0.3s; }
+.sneaker-card:nth-child(5) { animation-delay: 0.4s; }
+.sneaker-card:nth-child(6) { animation-delay: 0.5s; }
