@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Jordan 1 Retro High - SneakPeak</title>
+    <link rel="stylesheet" href="../sneak.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="../index.html"><h1>SneakPeak</h1></a>
+                <span class="verified-badge">✓ VERIFIED</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#sneakers">Sneakers</a></li>
+                <li><a href="../index.html#sell">Sell</a></li>
+                <li><a href="../index.html#buyback">Buy-Back</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="../login.html" class="btn-secondary">Login</a>
+                <a href="../signup.html" class="btn-primary">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="../index.html">Home</a> 
+                <span>/</span> 
+                <a href="../index.html#sneakers">Sneakers</a> 
+                <span>/</span> 
+                <span class="current">Air Jordan 1 Retro High</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="product-details">
+        <div class="container">
+            <div class="product-grid">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="../images/shoe1.png" alt="Air Jordan 1 Retro High" id="mainImage">
+                    </div>
+                    <!-- <div class="image-thumbnails">
+                        <img src="../images/shoe1.png" alt="Front view" class="thumbnail active" onclick="changeImage('../images/shoe1.png')">
+                        <img src="../images/shoe1-side.png" alt="Side view" class="thumbnail" onclick="changeImage('../images/shoe1-side.png')">
+                        <img src="../images/shoe1-back.png" alt="Back view" class="thumbnail" onclick="changeImage('../images/shoe1-back.png')">
+                        <img src="../images/shoe1-sole.png" alt="Sole view" class="thumbnail" onclick="changeImage('../images/shoe1-sole.png')">
+                    </div> -->
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <div class="product-badge premium">PREMIUM</div>
+                    <h1 class="product-title">Air Jordan 1 Retro High</h1>
+                    <p class="product-brand">Nike Jordan</p>
+                    <p class="product-sku">SKU: AJ1-RH-001</p>
+                    
+                    <div class="price-section">
+                        <span class="current-price">$2,450</span>
+                        <span class="original-price">$170</span>
+                        <span class="price-change positive">+1,341%</span>
+                    </div>
+
+                     <div class="buyback-info">
+                        <div class="buyback-price">Buy-back Guarantee: $1,960</div>
+                        <p class="buyback-text">Guaranteed 80% buy-back value</p>
+                    </div> 
+
+                    <!-- Size Selection -->
+                    <div class="size-selection">
+                        <h3>Select Size (US)</h3>
+                        <div class="size-grid">
+                            <button class="size-btn" data-size="7">7</button>
+                            <button class="size-btn" data-size="7.5">7.5</button>
+                            <button class="size-btn" data-size="8">8</button>
+                            <button class="size-btn" data-size="8.5">8.5</button>
+                            <button class="size-btn" data-size="9">9</button>
+                            <button class="size-btn" data-size="9.5">9.5</button>
+                            <button class="size-btn" data-size="10">10</button>
+                            <button class="size-btn" data-size="10.5">10.5</button>
+                            <button class="size-btn" data-size="11">11</button>
+                            <button class="size-btn" data-size="11.5">11.5</button>
+                            <button class="size-btn" data-size="12">12</button>
+                            <button class="size-btn" data-size="13">13</button>
+                        </div>
+                    </div>
+
+                    <!-- Condition -->
+                    <!-- <div class="condition-section">
+                        <h3>Condition</h3>
+                        <div class="condition-badge excellent">
+                            <span class="condition-text">Excellent (9/10)</span>
+                            <span class="condition-desc">Minor signs of wear, excellent overall condition</span>
+                        </div>
+                    </div> -->
+
+                    <!-- Action Buttons -->
+                    <div class="product-actions">
+                        <button class="btn-primary large full-width">Add to Cart - $2,450</button>
+                        <button class="btn-outline large full-width">Buy Now</button>
+                    </div>
+
+                    <!-- Authentication -->
+                    <div class="auth-info">
+                        <div class="auth-badge">
+                            <span class="checkmark">✓</span>
+                            <div class="auth-text">
+                                <strong>100% Authentic Guaranteed</strong>
+                                <p>Verified by our expert authentication team</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Description -->
+    <section class="product-description">
+        <div class="container">
+            <div class="description-tabs">
+                <button class="tab-btn active" onclick="showTab('description')">Description</button>
+                <button class="tab-btn" onclick="showTab('details')">Details</button>
+                <button class="tab-btn" onclick="showTab('authentication')">Authentication</button>
+            </div>
+
+            <div class="tab-content">
+                <div id="description" class="tab-pane active">
+                    <h3>About This Sneaker</h3>
+                    <p>The Air Jordan 1 Retro High is one of the most iconic sneakers ever created. Originally released in 1985, this legendary silhouette revolutionized basketball footwear and street culture. This particular pair features the classic Chicago colorway with premium leather construction and the unmistakable Air Jordan branding.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Premium leather upper with classic Chicago Bulls colorway</li>
+                        <li>Nike Air cushioning technology in the sole</li>
+                        <li>Iconic Wings logo and Jumpman branding</li>
+                        <li>High-top silhouette for ankle support</li>
+                        <li>Rubber outsole with pivot point for traction</li>
+                    </ul>
+                </div>
+
+                <div id="details" class="tab-pane">
+                    <h3>Product Details</h3>
+                    <div class="details-grid">
+                        <div class="detail-row">
+                            <span class="detail-label">Brand:</span>
+                            <span class="detail-value">Nike Jordan</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Model:</span>
+                            <span class="detail-value">Air Jordan 1 Retro High</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Colorway:</span>
+                            <span class="detail-value">Chicago (White/Black/Red)</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Release Year:</span>
+                            <span class="detail-value">2015</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Material:</span>
+                            <span class="detail-value">Premium Leather</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Retail Price:</span>
+                            <span class="detail-value">$170</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="authentication" class="tab-pane">
+                    <h3>Authentication Process</h3>
+                    <p>Every sneaker on SneakPeak goes through our rigorous authentication process conducted by certified experts.</p>
+                    
+                    <div class="auth-steps">
+                        <div class="auth-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Visual Inspection</h4>
+                                <p>Detailed examination of materials, stitching, and construction quality</p>
+                            </div>
+                        </div>
+                        <div class="auth-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Logo Verification</h4>
+                                <p>Verification of all logos, fonts, and placement accuracy</p>
+                            </div>
+                        </div>
+                        <div class="auth-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Box & Accessories</h4>
+                                <p>Authentication of original packaging and included accessories</p>
+                            </div>
+                        </div>
+                        <div class="auth-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Final Approval</h4>
+                                <p>Expert certification and quality assurance before listing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>SneakPeak</h3>
+                    <p>The most trusted sneaker resale platform</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <a href="#">Buy Sneakers</a>
+                        <a href="#">Sell Sneakers</a>
+                        <a href="#">Buy-Back Program</a>
+                        <a href="#">Authentication</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Shipping Info</a>
+                        <a href="#">Returns</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="../about.html">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                        <a href="#">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SneakPeak. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+             
+        // Image gallery functionality
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Size selection functionality
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        // Tab functionality
+        function showTab(tabName) {
+            // Hide all tab panes
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.remove('active');
+            });
+            
+            // Remove active class from all tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab pane
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+	
+	
+
+
+
+    <style>
+        /* Product page specific styles */
+        .breadcrumb {
+            background: #f8f9fa;
+            padding: 1rem 0;
+            margin-top: 80px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-nav a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb-nav .current {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .product-details {
+            padding: 2rem 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .product-images {
+            position: sticky;
+            top: 100px;
+        }
+
+        .main-image {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .main-image img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+        }
+
+        .image-thumbnails {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .thumbnail.active {
+            border-color: #667eea;
+        }
+
+        .product-info {
+            padding: 1rem 0;
+        }
+
+        .product-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .product-badge.premium {
+            background: #ffd700;
+            color: #333;
+        }
+
+        .product-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .product-brand {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+
+        .product-sku {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 2rem;
+        }
+
+        .price-section {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .current-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .original-price {
+            font-size: 1.1rem;
+            color: #999;
+            text-decoration: line-through;
+            margin-right: 0.5rem;
+        }
+
+        .price-change {
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+        }
+
+        .price-change.positive {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .buyback-info {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .buyback-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .buyback-text {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .size-selection {
+            margin-bottom: 2rem;
+        }
+
+        .size-selection h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0.5rem;
+        }
+
+        .size-btn {
+            padding: 0.75rem;
+            border: 2px solid #e9ecef;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .size-btn:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .size-btn.selected {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+
+        .condition-section {
+            margin-bottom: 2rem;
+        }
+
+        .condition-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .condition-badge {
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 4px solid #10b981;
+            background: #f0fdf4;
+        }
+
+        .condition-text {
+            display: block;
+            font-weight: 600;
+            color: #065f46;
+            margin-bottom: 0.25rem;
+        }
+
+        .condition-desc {
+            font-size: 0.9rem;
+            color: #0f9141;
+        }
+
+        .product-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .auth-info {
+            background: #f8f9ff;
+            border: 1px solid #e0e7ff;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .auth-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .checkmark {
+            width: 40px;
+            height: 40px;
+            background: #10b981;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .auth-text strong {
+            display: block;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+
+        .auth-text p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+
+        .product-description {
+            background: #f8f9fa;
+            padding: 3rem 0;
+        }
+
+        .description-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .tab-btn {
+            padding: 1rem 1.5rem;
+            border: none;
+            background: transparent;
+            color: #666;
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        .tab-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .tab-pane {
+            display: none;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        .tab-pane h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .tab-pane h4 {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem;
+            color: #333;
+        }
+
+        .tab-pane p {
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .tab-pane ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tab-pane li {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .details-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .detail-row {
+            display: flex;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f1f2f6;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #333;
+            min-width: 150px;
+        }
+
+        .detail-value {
+            color: #666;
+        }
+
+        .auth-steps {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .auth-step {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            margin: 0 0 0.5rem 0;
+            color: #333;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .nav-brand a {
+            text-decoration: none;
+        }
+
+        .nav-brand h1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-images {
+                position: static;
+            }
+
+            .product-title {
+                font-size: 2rem;
+            }
+
+            .current-price {
+                font-size: 2rem;
+            }
+
+            .size-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .description-tabs {
+                flex-wrap: wrap;
+            }
+
+            .auth-step {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        
