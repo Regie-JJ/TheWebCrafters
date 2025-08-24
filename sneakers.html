@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers - SneakPeak</title>
+    <link rel="stylesheet" href="sneak.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .sneakers-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 2rem 60px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .sneakers-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffd700, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .category-section {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .category-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .category-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .category-header h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .sneakers-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1><a href="index.html">SneakPeak</a></h1>
+                <span class="verified-badge">✓ VERIFIED</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sneakers.html" style="color: #667eea;">Sneakers</a></li>
+                <li><a href="#buyback">Buy-Back</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn-secondary">Login</a>
+                <a href="signup.html" class="btn-primary">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="sneakers-hero">
+        <div class="container">
+            <h1>Premium Sneakers</h1>
+            <p>Discover authentic, rare, and collectible sneakers with guaranteed buy-back protection</p>
+        </div>
+    </section>
+
+    <!-- Jordan Collection -->
+    <section id="jordan-collection" class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2>Jordan Collection</h2>
+                <p>Iconic basketball heritage meets street culture</p>
+            </div>
+            <div class="category-grid">
+                <div class="sneaker-card premium">
+                    <div class="sneaker-image air-jordan">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body jordan-body"></div>
+                            <div class="shoe-sole jordan-sole"></div>
+                            <div class="shoe-laces jordan-laces"></div>
+                            <div class="jumpman-logo">🏀</div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Air Jordan 1 Retro High</h3>
+                        <p class="brand">Nike Jordan</p>
+                        <div class="price-section">
+                            <span class="current-price">$2,450</span>
+                            <span class="buyback-price">Buy-back: $1,960</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card exclusive">
+                    <div class="sneaker-image travis">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body travis-body"></div>
+                            <div class="shoe-sole travis-sole"></div>
+                            <div class="travis-swoosh"></div>
+                            <div class="cactus-jack">🌵</div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Travis Scott x Air Jordan 1</h3>
+                        <p class="brand">Nike Jordan x Cactus Jack</p>
+                        <div class="price-section">
+                            <span class="current-price">$4,100</span>
+                            <span class="buyback-price">Buy-back: $3,280</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card luxury">
+                    <div class="sneaker-image dior">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body dior-body"></div>
+                            <div class="shoe-sole dior-sole"></div>
+                            <div class="dior-pattern"></div>
+                            <div class="dior-logo">CD</div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Dior x Air Jordan 1 High</h3>
+                        <p class="brand">Nike Jordan x Dior</p>
+                        <div class="price-section">
+                            <span class="current-price">$12,500</span>
+                            <span class="buyback-price">Buy-back: $10,000</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card rare">
+                    <div class="sneaker-image air-jordan" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #1e3a8a, #3b82f6); border-radius: 40px 10px 30px 50px; width: 180px; height: 80px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 95px; width: 190px; height: 25px; position: absolute; bottom: -10px; left: -5px;"></div>
+                            <div style="position: absolute; top: 20px; right: 20px; font-size: 1.5rem; color: #ffd700;">⚡</div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Air Jordan 3 Retro Royal</h3>
+                        <p class="brand">Nike Jordan</p>
+                        <div class="price-section">
+                            <span class="current-price">$1,890</span>
+                            <span class="buyback-price">Buy-back: $1,512</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card limited">
+                    <div class="sneaker-image air-jordan" style="background: linear-gradient(135deg, #000, #333);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #000, #333); border-radius: 40px 10px 30px 50px; width: 180px; height: 80px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); border-radius: 95px; width: 190px; height: 25px; position: absolute; bottom: -10px; left: -5px;"></div>
+                            <div style="position: absolute; top: 20px; right: 20px; font-size: 1.5rem; color: #ff6b6b;">🏀</div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Air Jordan 11 Bred</h3>
+                        <p class="brand">Nike Jordan</p>
+                        <div class="price-section">
+                            <span class="current-price">$3,200</span>
+                            <span class="buyback-price">Buy-back: $2,560</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yeezy Collection -->
+    <section id="yeezy-collection" class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2>Yeezy Collection</h2>
+                <p>Kanye West's revolutionary designs and comfort innovation</p>
+            </div>
+            <div class="category-grid">
+                <div class="sneaker-card">
+                    <div class="sneaker-image yeezy">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body yeezy-body"></div>
+                            <div class="shoe-sole yeezy-sole"></div>
+                            <div class="yeezy-stripe"></div>
+                            <div class="yeezy-pattern"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Yeezy Boost 350 V2</h3>
+                        <p class="brand">Adidas Yeezy</p>
+                        <div class="price-section">
+                            <span class="current-price">$890</span>
+                            <span class="buyback-price">Buy-back: $712</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card rare">
+                    <div class="sneaker-image yeezy" style="background: linear-gradient(135deg, #2f3542, #57606f);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #2f3542, #57606f); border-radius: 85px; width: 170px; height: 70px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #1a1a1a, #333); border-radius: 90px; width: 180px; height: 30px; position: absolute; bottom: -15px; left: -5px;"></div>
+                            <div style="width: 120px; height: 8px; background: #ff6b6b; position: absolute; top: 30px; left: 25px; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Yeezy Boost 700 V2</h3>
+                        <p class="brand">Adidas Yeezy</p>
+                        <div class="price-section">
+                            <span class="current-price">$1,250</span>
+                            <span class="buyback-price">Buy-back: $1,000</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card premium">
+                    <div class="sneaker-image yeezy" style="background: linear-gradient(135deg, #8b5cf6, #a855f7);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #f8f9fa, #e9ecef); border-radius: 85px; width: 170px; height: 70px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #8b5cf6, #a855f7); border-radius: 90px; width: 180px; height: 30px; position: absolute; bottom: -15px; left: -5px;"></div>
+                            <div style="width: 120px; height: 8px; background: #8b5cf6; position: absolute; top: 30px; left: 25px; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Yeezy Boost 350 V2 Zebra</h3>
+                        <p class="brand">Adidas Yeezy</p>
+                        <div class="price-section">
+                            <span class="current-price">$1,890</span>
+                            <span class="buyback-price">Buy-back: $1,512</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card exclusive">
+                    <div class="sneaker-image yeezy" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #10b981, #059669); border-radius: 85px; width: 170px; height: 70px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 90px; width: 180px; height: 30px; position: absolute; bottom: -15px; left: -5px;"></div>
+                            <div style="width: 120px; height: 8px; background: #fff; position: absolute; top: 30px; left: 25px; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Yeezy Boost 380 Alien</h3>
+                        <p class="brand">Adidas Yeezy</p>
+                        <div class="price-section">
+                            <span class="current-price">$2,100</span>
+                            <span class="buyback-price">Buy-back: $1,680</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card luxury">
+                    <div class="sneaker-image yeezy" style="background: linear-gradient(135deg, #ffd700, #ffed4e);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #ffd700, #ffed4e); border-radius: 85px; width: 170px; height: 70px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #333, #2f3542); border-radius: 90px; width: 180px; height: 30px; position: absolute; bottom: -15px; left: -5px;"></div>
+                            <div style="width: 120px; height: 8px; background: #333; position: absolute; top: 30px; left: 25px; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Yeezy Slide Bone</h3>
+                        <p class="brand">Adidas Yeezy</p>
+                        <div class="price-section">
+                            <span class="current-price">$450</span>
+                            <span class="buyback-price">Buy-back: $360</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Designer Collaborations -->
+    <section id="designer-collaborations" class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2>Designer Collaborations</h2>
+                <p>Exclusive partnerships between streetwear and high fashion</p>
+            </div>
+            <div class="category-grid">
+                <div class="sneaker-card limited">
+                    <div class="sneaker-image off-white">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body offwhite-body"></div>
+                            <div class="shoe-sole offwhite-sole"></div>
+                            <div class="offwhite-tag">"SHOES"</div>
+                            <div class="offwhite-zip"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Off-White x Nike Air Max 90</h3>
+                        <p class="brand">Nike x Off-White</p>
+                        <div class="price-section">
+                            <span class="current-price">$3,200</span>
+                            <span class="buyback-price">Buy-back: $2,560</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card rare">
+                    <div class="sneaker-image fragment">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body fragment-body"></div>
+                            <div class="shoe-sole fragment-sole"></div>
+                            <div class="fragment-lightning">⚡</div>
+                            <div class="fragment-text" style="position: absolute; top: 30px; left: 30px; font-size: 0.8rem; font-weight: 700; color: white;">FRGMT</div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Fragment x Air Jordan 1</h3>
+                        <p class="brand">Nike Jordan x Fragment</p>
+                        <div class="price-section">
+                            <span class="current-price">$5,800</span>
+                            <span class="buyback-price">Buy-back: $4,640</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card exclusive">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #fff, #f1f2f6); border-radius: 35px 15px 25px 45px; width: 175px; height: 75px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3); border: 2px solid #ff6b6b;"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #333, #2f3542); border-radius: 92px; width: 185px; height: 28px; position: absolute; bottom: -12px; left: -5px;"></div>
+                            <div style="position: absolute; top: -5px; left: 20px; background: #ff6b6b; color: white; padding: 2px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 3px;">"UNION"</div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Union x Air Jordan 4</h3>
+                        <p class="brand">Nike Jordan x Union LA</p>
+                        <div class="price-section">
+                            <span class="current-price">$2,890</span>
+                            <span class="buyback-price">Buy-back: $2,312</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card luxury">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #8b4513, #a0522d);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #8b4513, #a0522d); border-radius: 35px 15px 25px 45px; width: 175px; height: 75px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 92px; width: 185px; height: 28px; position: absolute; bottom: -12px; left: -5px;"></div>
+                            <div style="position: absolute; top: 25px; right: 20px; font-size: 1.2rem;">🌵</div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Travis Scott x Nike SB Dunk</h3>
+                        <p class="brand">Nike SB x Cactus Jack</p>
+                        <div class="price-section">
+                            <span class="current-price">$6,500</span>
+                            <span class="buyback-price">Buy-back: $5,200</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card premium">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #e8e8e8, #d1d1d1);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #f8f9fa, #e9ecef); border-radius: 35px 15px 25px 45px; width: 175px; height: 75px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); border-radius: 92px; width: 185px; height: 28px; position: absolute; bottom: -12px; left: -5px;"></div>
+                            <div style="position: absolute; top: -5px; left: 20px; background: #333; color: white; padding: 2px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 3px;">"FEAR"</div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Fear of God x Nike Air Skylon II</h3>
+                        <p class="brand">Nike x Fear of God</p>
+                        <div class="price-section">
+                            <span class="current-price">$1,450</span>
+                            <span class="buyback-price">Buy-back: $1,160</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nike Collection -->
+    <section id="nike-collection" class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2>Nike Collection</h2>
+                <p>Innovation and performance from the swoosh</p>
+            </div>
+            <div class="category-grid">
+                <div class="sneaker-card premium">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #fff, #f1f2f6); border-radius: 40px 10px 30px 50px; width: 180px; height: 80px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); border-radius: 95px; width: 190px; height: 25px; position: absolute; bottom: -10px; left: -5px;"></div>
+                            <div style="width: 30px; height: 20px; background: #333; position: absolute; top: 25px; left: 40px; border-radius: 50% 0 50% 50%; transform: rotate(-20deg);"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Nike Air Max 1 OG Red</h3>
+                        <p class="brand">Nike</p>
+                        <div class="price-section">
+                            <span class="current-price">$650</span>
+                            <span class="buyback-price">Buy-back: $520</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card rare">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #1e3a8a, #3b82f6); border-radius: 40px 10px 30px 50px; width: 180px; height: 80px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 95px; width: 190px; height: 25px; position: absolute; bottom: -10px; left: -5px;"></div>
+                            <div style="width: 30px; height: 20px; background: #fff; position: absolute; top: 25px; left: 40px; border-radius: 50% 0 50% 50%; transform: rotate(-20deg);"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Nike Air Force 1 Low Royal</h3>
+                        <p class="brand">Nike</p>
+                        <div class="price-section">
+                            <span class="current-price">$890</span>
+                            <span class="buyback-price">Buy-back: $712</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card exclusive">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #10b981, #059669); border-radius: 40px 10px 30px 50px; width: 180px; height: 80px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 95px; width: 190px; height: 25px; position: absolute; bottom: -10px; left: -5px;"></div>
+                            <div style="width: 30px; height: 20px; background: #fff; position: absolute; top: 25px; left: 40px; border-radius: 50% 0 50% 50%; transform: rotate(-20deg);"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Nike Dunk Low Pine Green</h3>
+                        <p class="brand">Nike</p>
+                        <div class="price-section">
+                            <span class="current-price">$1,200</span>
+                            <span class="buyback-price">Buy-back: $960</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card limited">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #8b5cf6, #a855f7);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #8b5cf6, #a855f7); border-radius: 40px 10px 30px 50px; width: 180px; height: 80px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 95px; width: 190px; height: 25px; position: absolute; bottom: -10px; left: -5px;"></div>
+                            <div style="width: 30px; height: 20px; background: #fff; position: absolute; top: 25px; left: 40px; border-radius: 50% 0 50% 50%; transform: rotate(-20deg);"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Nike SB Dunk Low Purple Lobster</h3>
+                        <p class="brand">Nike SB</p>
+                        <div class="price-section">
+                            <span class="current-price">$2,800</span>
+                            <span class="buyback-price">Buy-back: $2,240</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card luxury">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #ffd700, #ffed4e);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #ffd700, #ffed4e); border-radius: 40px 10px 30px 50px; width: 180px; height: 80px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #333, #2f3542); border-radius: 95px; width: 190px; height: 25px; position: absolute; bottom: -10px; left: -5px;"></div>
+                            <div style="width: 30px; height: 20px; background: #333; position: absolute; top: 25px; left: 40px; border-radius: 50% 0 50% 50%; transform: rotate(-20deg);"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Nike Air Max 97 Gold Bullet</h3>
+                        <p class="brand">Nike</p>
+                        <div class="price-section">
+                            <span class="current-price">$1,650</span>
+                            <span class="buyback-price">Buy-back: $1,320</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adidas Collection -->
+    <section id="adidas-collection" class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2>Adidas Collection</h2>
+                <p>Three stripes heritage and modern innovation</p>
+            </div>
+            <div class="category-grid">
+                <div class="sneaker-card premium">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #fff, #f8f9fa);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 85px; width: 170px; height: 70px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #333, #2f3542); border-radius: 90px; width: 180px; height: 30px; position: absolute; bottom: -15px; left: -5px;"></div>
+                            <div style="width: 3px; height: 40px; background: #333; position: absolute; top: 15px; left: 30px;"></div>
+                            <div style="width: 3px; height: 40px; background: #333; position: absolute; top: 15px; left: 40px;"></div>
+                            <div style="width: 3px; height: 40px; background: #333; position: absolute; top: 15px; left: 50px;"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Adidas Stan Smith OG</h3>
+                        <p class="brand">Adidas Originals</p>
+                        <div class="price-section">
+                            <span class="current-price">$320</span>
+                            <span class="buyback-price">Buy-back: $256</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card rare">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); border-radius: 85px; width: 170px; height: 70px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 90px; width: 180px; height: 30px; position: absolute; bottom: -15px; left: -5px;"></div>
+                            <div style="width: 3px; height: 40px; background: #fff; position: absolute; top: 15px; left: 30px;"></div>
+                            <div style="width: 3px; height: 40px; background: #fff; position: absolute; top: 15px; left: 40px;"></div>
+                            <div style="width: 3px; height: 40px; background: #fff; position: absolute; top: 15px; left: 50px;"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Adidas Gazelle Vintage Red</h3>
+                        <p class="brand">Adidas Originals</p>
+                        <div class="price-section">
+                            <span class="current-price">$780</span>
+                            <span class="buyback-price">Buy-back: $624</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card exclusive">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #1e3a8a, #3b82f6); border-radius: 85px; width: 170px; height: 70px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 90px; width: 180px; height: 30px; position: absolute; bottom: -15px; left: -5px;"></div>
+                            <div style="width: 3px; height: 40px; background: #fff; position: absolute; top: 15px; left: 30px;"></div>
+                            <div style="width: 3px; height: 40px; background: #fff; position: absolute; top: 15px; left: 40px;"></div>
+                            <div style="width: 3px; height: 40px; background: #fff; position: absolute; top: 15px; left: 50px;"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Adidas Samba OG Navy</h3>
+                        <p class="brand">Adidas Originals</p>
+                        <div class="price-section">
+                            <span class="current-price">$450</span>
+                            <span class="buyback-price">Buy-back: $360</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card limited">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #10b981, #059669); border-radius: 85px; width: 170px; height: 70px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 90px; width: 180px; height: 30px; position: absolute; bottom: -15px; left: -5px;"></div>
+                            <div style="width: 3px; height: 40px; background: #fff; position: absolute; top: 15px; left: 30px;"></div>
+                            <div style="width: 3px; height: 40px; background: #fff; position: absolute; top: 15px; left: 40px;"></div>
+                            <div style="width: 3px; height: 40px; background: #fff; position: absolute; top: 15px; left: 50px;"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Adidas Campus 80s Green</h3>
+                        <p class="brand">Adidas Originals</p>
+                        <div class="price-section">
+                            <span class="current-price">$650</span>
+                            <span class="buyback-price">Buy-back: $520</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card luxury">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #8b5cf6, #a855f7);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #8b5cf6, #a855f7); border-radius: 85px; width: 170px; height: 70px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 90px; width: 180px; height: 30px; position: absolute; bottom: -15px; left: -5px;"></div>
+                            <div style="width: 3px; height: 40px; background: #fff; position: absolute; top: 15px; left: 30px;"></div>
+                            <div style="width: 3px; height: 40px; background: #fff; position: absolute; top: 15px; left: 40px;"></div>
+                            <div style="width: 3px; height: 40px; background: #fff; position: absolute; top: 15px; left: 50px;"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Adidas Ultraboost 22 Purple</h3>
+                        <p class="brand">Adidas Running</p>
+                        <div class="price-section">
+                            <span class="current-price">$890</span>
+                            <span class="buyback-price">Buy-back: $712</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>SneakPeak</h3>
+                    <p>The most trusted sneaker resale platform with verified authenticity and buy-back guarantee.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <a href="sneakers.html">Buy Sneakers</a>
+                        <a href="#">Sell Sneakers</a>
+                        <a href="#">Buy-Back Program</a>
+                        <a href="#">Authentication</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Shipping Info</a>
+                        <a href="#">Returns</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SneakPeak. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
