@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy-Back Program - SneakPeak</title>
+    <link rel="stylesheet" href="sneak.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>SneakPeak</h1>
+                <span class="verified-badge">✓ VERIFIED</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sneakers.html">Sneakers</a></li>
+                <li><a href="#buyback">Buy-Back</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn-secondary">Login</a>
+                <a href="signup.html" class="btn-primary">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Buy-Back Hero -->
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="hero-content" style="text-align: center;">
+                <h1>Sell Your Sneakers Back</h1>
+                <p>Get up to 80% of your purchase price back with our guaranteed buy-back program</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy-Back Form -->
+    <section class="buyback-form-section">
+        <div class="container">
+            <div class="buyback-form-container">
+                <h2>Start Your Buy-Back Request</h2>
+                <form id="buybackForm" class="buyback-form">
+                    <div class="form-group">
+                        <label for="orderNumber">Original Order Number</label>
+                        <input type="text" id="orderNumber" name="orderNumber" required placeholder="Enter your order number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sneakerModel">Sneaker Model</label>
+                        <select id="sneakerModel" name="sneakerModel" required>
+                            <option value="">Select your sneaker</option>
+                            <option value="jordan1">Air Jordan 1 Retro High</option>
+                            <option value="travis-jordan">Travis Scott x Air Jordan 1</option>
+                            <option value="dior-jordan">Dior x Air Jordan 1 High</option>
+                            <option value="yeezy-350">Yeezy Boost 350 V2</option>
+                            <option value="yeezy-zebra">Yeezy Boost 350 V2 Zebra</option>
+                            <option value="offwhite-max">Off-White x Nike Air Max 90</option>
+                            <option value="fragment-jordan">Fragment x Air Jordan 1</option>
+                            <option value="travis-dunk">Travis Scott x Nike SB Dunk</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="condition">Sneaker Condition</label>
+                        <select id="condition" name="condition" required>
+                            <option value="">Select condition</option>
+                            <option value="new">New/Unworn (100% buy-back)</option>
+                            <option value="excellent">Excellent (90% buy-back)</option>
+                            <option value="good">Good (80% buy-back)</option>
+                            <option value="fair">Fair (70% buy-back)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="photos">Upload Photos (Required)</label>
+                        <input type="file" id="photos" name="photos" multiple accept="image/*" required>
+                        <small>Upload at least 3 photos: front, side, and sole</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">Reason for Selling Back</label>
+                        <textarea id="reason" name="reason" placeholder="Optional: Tell us why you're selling back"></textarea>
+                    </div>
+
+                    <div class="estimated-value">
+                        <h3>Estimated Buy-Back Value: <span id="estimatedValue">$0</span></h3>
+                        <p>Final value determined after inspection</p>
+                    </div>
+
+                    <button type="submit" class="btn-primary large">Submit Buy-Back Request</button>
+                </form>
+            </div>
+
+            <!-- Process Steps -->
+            <div class="process-steps">
+                <h2>How It Works</h2>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Submit Request</h3>
+                        <p>Fill out the form with your sneaker details and upload photos</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Get Quote</h3>
+                        <p>Receive instant quote based on condition and market value</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Ship Sneakers</h3>
+                        <p>Use our prepaid shipping label to send your sneakers</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Get Paid</h3>
+                        <p>Receive payment within 24 hours of inspection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>SneakPeak</h3>
+                    <p>The most trusted sneaker resale platform</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <a href="#">Buy Sneakers</a>
+                        <a href="#">Sell Sneakers</a>
+                        <a href="#">Buy-Back Program</a>
+                        <a href="#">Authentication</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Shipping Info</a>
+                        <a href="#">Returns</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                        <a href="#">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SneakPeak. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Buy-back value calculator
+        const sneakerValues = {
+            'jordan1': 2450,
+            'travis-jordan': 4100,
+            'dior-jordan': 12500,
+            'yeezy-350': 890,
+            'yeezy-zebra': 1890,
+            'offwhite-max': 3200,
+            'fragment-jordan': 5800,
+            'travis-dunk': 6500
+        };
+
+        const conditionMultipliers = {
+            'new': 1.0,
+            'excellent': 0.9,
+            'good': 0.8,
+            'fair': 0.7
+        };
+
+        function updateEstimatedValue() {
+            const sneaker = document.getElementById('sneakerModel').value;
+            const condition = document.getElementById('condition').value;
+            
+            if (sneaker && condition) {
+                const baseValue = sneakerValues[sneaker] || 0;
+                const multiplier = conditionMultipliers[condition] || 0;
+                const estimatedValue = Math.round(baseValue * multiplier);
+                
+                document.getElementById('estimatedValue').textContent = `$${estimatedValue.toLocaleString()}`;
+            } else {
+                document.getElementById('estimatedValue').textContent = '$0';
+            }
+        }
+
+        document.getElementById('sneakerModel').addEventListener('change', updateEstimatedValue);
+        document.getElementById('condition').addEventListener('change', updateEstimatedValue);
+
+        // Form submission
+        document.getElementById('buybackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Buy-back request submitted! You will receive a confirmation email shortly.');
+        });
+    </script>
+</body>
+</html>

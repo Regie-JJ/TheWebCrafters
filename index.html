@@ -17,13 +17,17 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#sneakers">Sneakers</a></li>
-                <li><a href="#sell">Sell</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="sneakers.html">Sneakers</a></li>
+                <li><a href="#buyback">Buy-Back</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="btn-secondary">Login</button>
-                <button class="btn-primary">Sign Up</button>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <span>🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <a href="login.html" class="btn-secondary">Login</a>
+                <a href="signup.html" class="btn-primary">Sign Up</a>
             </div>
         </nav>
     </header>
@@ -35,7 +39,7 @@
             <p>The most trusted sneaker resale platform with buy-back guarantee and verified authenticity.</p>
             <div class="hero-buttons">
                 <button class="btn-primary large">Shop Now</button>
-                <button class="btn-outline large">Sell Your Sneakers</button>
+                <a href="#buyback" class="btn-outline large">Buy-Back Program</a>
             </div>
         </div>
         <div class="hero-stats">
@@ -54,12 +58,12 @@
         </div>
     </section>
 
-    <!-- Featured Sneakers -->
-    <section id="sneakers" class="featured-sneakers">
+    <!-- Jordan Collection -->
+    <section class="featured-sneakers">
         <div class="container">
-            <h2>Featured Sneakers</h2>
+            <h2>Jordan Collection</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">Iconic basketball heritage meets street culture</p>
             <div class="sneaker-grid">
-                <!-- Air Jordan Retro -->
                 <div class="sneaker-card premium">
                     <div class="sneaker-image air-jordan">
                         <div class="sneaker-visual">
@@ -83,55 +87,6 @@
                     </div>
                 </div>
 
-                <!-- Yeezy Boost -->
-                <div class="sneaker-card">
-                    <div class="sneaker-image yeezy">
-                        <div class="sneaker-visual">
-                            <div class="shoe-body yeezy-body"></div>
-                            <div class="shoe-sole yeezy-sole"></div>
-                            <div class="yeezy-stripe"></div>
-                            <div class="yeezy-pattern"></div>
-                        </div>
-                    </div>
-                    <div class="sneaker-info">
-                        <h3>Yeezy Boost 350 V2</h3>
-                        <p class="brand">Adidas Yeezy</p>
-                        <div class="price-section">
-                            <span class="current-price">$890</span>
-                            <span class="buyback-price">Buy-back: $712</span>
-                        </div>
-                        <div class="sneaker-actions">
-                            <button class="btn-primary">Buy Now</button>
-                            <button class="btn-outline">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Off-White Collaboration -->
-                <div class="sneaker-card limited">
-                    <div class="sneaker-image off-white">
-                        <div class="sneaker-visual">
-                            <div class="shoe-body offwhite-body"></div>
-                            <div class="shoe-sole offwhite-sole"></div>
-                            <div class="offwhite-tag">"SHOES"</div>
-                            <div class="offwhite-zip"></div>
-                        </div>
-                    </div>
-                    <div class="sneaker-info">
-                        <h3>Off-White x Nike Air Max 90</h3>
-                        <p class="brand">Nike x Off-White</p>
-                        <div class="price-section">
-                            <span class="current-price">$3,200</span>
-                            <span class="buyback-price">Buy-back: $2,560</span>
-                        </div>
-                        <div class="sneaker-actions">
-                            <button class="btn-primary">Buy Now</button>
-                            <button class="btn-outline">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Travis Scott Collaboration -->
                 <div class="sneaker-card exclusive">
                     <div class="sneaker-image travis">
                         <div class="sneaker-visual">
@@ -155,7 +110,6 @@
                     </div>
                 </div>
 
-                <!-- Dior Collaboration -->
                 <div class="sneaker-card luxury">
                     <div class="sneaker-image dior">
                         <div class="sneaker-visual">
@@ -178,23 +132,34 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="sneakers.html#jordan-collection" class="btn-outline">View All Jordans</a>
+            </div>
+        </div>
+    </section>
 
-                <!-- Fragment Design -->
-                <div class="sneaker-card rare">
-                    <div class="sneaker-image fragment">
+    <!-- Yeezy Collection -->
+    <section class="featured-sneakers" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Yeezy Collection</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">Kanye West's revolutionary designs and comfort innovation</p>
+            <div class="sneaker-grid">
+                <div class="sneaker-card">
+                    <div class="sneaker-image yeezy">
                         <div class="sneaker-visual">
-                            <div class="shoe-body fragment-body"></div>
-                            <div class="shoe-sole fragment-sole"></div>
-                            <div class="fragment-lightning">⚡</div>
-                            <div class="fragment-text">FRGMT</div>
+                            <div class="shoe-body yeezy-body"></div>
+                            <div class="shoe-sole yeezy-sole"></div>
+                            <div class="yeezy-stripe"></div>
+                            <div class="yeezy-pattern"></div>
                         </div>
                     </div>
                     <div class="sneaker-info">
-                        <h3>Fragment x Air Jordan 1</h3>
-                        <p class="brand">Nike Jordan x Fragment</p>
+                        <h3>Yeezy Boost 350 V2</h3>
+                        <p class="brand">Adidas Yeezy</p>
                         <div class="price-section">
-                            <span class="current-price">$6,800</span>
-                            <span class="buyback-price">Buy-back: $5,440</span>
+                            <span class="current-price">$890</span>
+                            <span class="buyback-price">Buy-back: $712</span>
                         </div>
                         <div class="sneaker-actions">
                             <button class="btn-primary">Buy Now</button>
@@ -202,6 +167,133 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="sneaker-card premium">
+                    <div class="sneaker-image yeezy" style="background: linear-gradient(135deg, #8b5cf6, #a855f7);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #f8f9fa, #e9ecef); border-radius: 85px; width: 170px; height: 70px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #8b5cf6, #a855f7); border-radius: 90px; width: 180px; height: 30px; position: absolute; bottom: -15px; left: -5px;"></div>
+                            <div style="width: 120px; height: 8px; background: #8b5cf6; position: absolute; top: 30px; left: 25px; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Yeezy Boost 350 V2 Zebra</h3>
+                        <p class="brand">Adidas Yeezy</p>
+                        <div class="price-section">
+                            <span class="current-price">$1,890</span>
+                            <span class="buyback-price">Buy-back: $1,512</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card exclusive">
+                    <div class="sneaker-image yeezy" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #10b981, #059669); border-radius: 85px; width: 170px; height: 70px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 90px; width: 180px; height: 30px; position: absolute; bottom: -15px; left: -5px;"></div>
+                            <div style="width: 120px; height: 8px; background: #fff; position: absolute; top: 30px; left: 25px; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Yeezy Boost 380 Alien</h3>
+                        <p class="brand">Adidas Yeezy</p>
+                        <div class="price-section">
+                            <span class="current-price">$2,100</span>
+                            <span class="buyback-price">Buy-back: $1,680</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="sneakers.html#yeezy-collection" class="btn-outline">View All Yeezys</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Designer Collaborations -->
+    <section class="featured-sneakers">
+        <div class="container">
+            <h2>Designer Collaborations</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">Exclusive partnerships between streetwear and high fashion</p>
+            <div class="sneaker-grid">
+                <div class="sneaker-card limited">
+                    <div class="sneaker-image off-white">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body offwhite-body"></div>
+                            <div class="shoe-sole offwhite-sole"></div>
+                            <div class="offwhite-tag">"SHOES"</div>
+                            <div class="offwhite-zip"></div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Off-White x Nike Air Max 90</h3>
+                        <p class="brand">Nike x Off-White</p>
+                        <div class="price-section">
+                            <span class="current-price">$3,200</span>
+                            <span class="buyback-price">Buy-back: $2,560</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card rare">
+                    <div class="sneaker-image fragment">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body fragment-body"></div>
+                            <div class="shoe-sole fragment-sole"></div>
+                            <div class="fragment-lightning">⚡</div>
+                            <div class="fragment-text" style="position: absolute; top: 30px; left: 30px; font-size: 0.8rem; font-weight: 700; color: white;">FRGMT</div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Fragment x Air Jordan 1</h3>
+                        <p class="brand">Nike Jordan x Fragment</p>
+                        <div class="price-section">
+                            <span class="current-price">$5,800</span>
+                            <span class="buyback-price">Buy-back: $4,640</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sneaker-card luxury">
+                    <div class="sneaker-image" style="background: linear-gradient(135deg, #8b4513, #a0522d);">
+                        <div class="sneaker-visual">
+                            <div class="shoe-body" style="background: linear-gradient(45deg, #8b4513, #a0522d); border-radius: 35px 15px 25px 45px; width: 175px; height: 75px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3);"></div>
+                            <div class="shoe-sole" style="background: linear-gradient(45deg, #fff, #f8f9fa); border-radius: 92px; width: 185px; height: 28px; position: absolute; bottom: -12px; left: -5px;"></div>
+                            <div style="position: absolute; top: 25px; right: 20px; font-size: 1.2rem;">🌵</div>
+                        </div>
+                    </div>
+                    <div class="sneaker-info">
+                        <h3>Travis Scott x Nike SB Dunk</h3>
+                        <p class="brand">Nike SB x Cactus Jack</p>
+                        <div class="price-section">
+                            <span class="current-price">$6,500</span>
+                            <span class="buyback-price">Buy-back: $5,200</span>
+                        </div>
+                        <div class="sneaker-actions">
+                            <button class="btn-primary">Buy Now</button>
+                            <button class="btn-outline">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="sneakers.html#designer-collaborations" class="btn-outline">View All Collaborations</a>
             </div>
         </div>
     </section>
@@ -219,7 +311,7 @@
                         <li>✓ 24-hour processing</li>
                         <li>✓ Secure payments</li>
                     </ul>
-                    <button class="btn-primary large">Start Selling</button>
+                    <a href="buyback.html" class="btn-primary large">Start Selling</a>
                 </div>
                 <div class="buyback-visual">
                     <div class="guarantee-badge">
@@ -231,29 +323,7 @@
         </div>
     </section>
 
-    <!-- Sell Section -->
-    <section id="sell" class="sell-section">
-        <div class="container">
-            <h2>Sell Your Sneakers</h2>
-            <div class="sell-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Submit Details</h3>
-                    <p>Upload photos and provide sneaker information</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Get Quote</h3>
-                    <p>Receive instant price quote based on market data</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Ship & Get Paid</h3>
-                    <p>Send your sneakers and receive payment within 24h</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -292,5 +362,126 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0</span></strong>
+            </div>
+            <button class="btn-primary full-width" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <script>
+        let cart = [];
+        let cartCount = 0;
+        let cartTotal = 0;
+
+        function addToCart(name, price, brand) {
+            const item = {
+                id: Date.now(),
+                name: name,
+                price: price,
+                brand: brand,
+                quantity: 1
+            };
+            
+            cart.push(item);
+            updateCartUI();
+            showCartNotification(name);
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            cartCount = cart.length;
+            cartTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            document.getElementById('cartCount').textContent = cartCount;
+            document.getElementById('cartTotal').textContent = cartTotal.toLocaleString();
+            
+            const cartItems = document.getElementById('cartItems');
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div class="item-info">
+                            <h4>${item.name}</h4>
+                            <p>${item.brand}</p>
+                            <span class="item-price">$${item.price.toLocaleString()}</span>
+                        </div>
+                        <button class="remove-item" onclick="removeFromCart(${item.id})">×</button>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function toggleCart() {
+            const sidebar = document.getElementById('cartSidebar');
+            const overlay = document.getElementById('cartOverlay');
+            
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function showCartNotification(itemName) {
+            const notification = document.createElement('div');
+            notification.className = 'cart-notification';
+            notification.textContent = `${itemName} added to cart!`;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 2000);
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            alert(`Proceeding to checkout with ${cartCount} items. Total: $${cartTotal.toLocaleString()}`);
+        }
+
+        // Add event listeners to all "Add to Cart" buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.btn-outline');
+            
+            addToCartButtons.forEach((button, index) => {
+                if (button.textContent.trim() === 'Add to Cart') {
+                    button.addEventListener('click', function() {
+                        const card = this.closest('.sneaker-card');
+                        const name = card.querySelector('h3').textContent;
+                        const brand = card.querySelector('.brand').textContent;
+                        const priceText = card.querySelector('.current-price').textContent;
+                        const price = parseInt(priceText.replace(/[$,]/g, ''));
+                        
+                        addToCart(name, price, brand);
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
