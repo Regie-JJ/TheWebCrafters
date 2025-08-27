@@ -18,12 +18,18 @@
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="sneakers.html">Sneakers</a></li>
-                <li><a href="#buyback">Buy-Back</a></li>
+                <li><a href="buyback.html" style="color: #667eea;">Buy-Back</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="login.html" class="btn-secondary">Login</a>
-                <a href="signup.html" class="btn-primary">Sign Up</a>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <span>🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div id="authButtons">
+                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="signup.html" class="btn-primary">Sign Up</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -204,6 +210,52 @@
         document.getElementById('buybackForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Buy-back request submitted! You will receive a confirmation email shortly.');
+        });
+        
+        function isUserLoggedIn() {
+            return localStorage.getItem('userLoggedIn') === 'true';
+        }
+        
+        function updateNavigation() {
+            const authButtons = document.getElementById('authButtons');
+            
+            if (isUserLoggedIn()) {
+                authButtons.innerHTML = `
+                    <button onclick="logout()" class="btn-secondary">Logout</button>
+                `;
+            } else {
+                authButtons.innerHTML = `
+                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="signup.html" class="btn-primary">Sign Up</a>
+                `;
+            }
+        }
+        
+        function logout() {
+            localStorage.removeItem('userLoggedIn');
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('cart');
+            updateNavigation();
+            alert('Logged out successfully');
+        }
+
+        function toggleCart() {
+            window.location.href = 'index.html#cart';
+        }
+
+        // Update navigation on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateNavigation();
+            document.getElementById('cartCount').textContent = JSON.parse(localStorage.getItem('cart') || '[]').length;
+        });
+        
+        // Auto logout when browser/tab is closed
+        window.addEventListener('beforeunload', function() {
+            if (isUserLoggedIn()) {
+                localStorage.removeItem('userLoggedIn');
+                localStorage.removeItem('userEmail');
+                localStorage.removeItem('cart');
+            }
         });
     </script>
 </body>
