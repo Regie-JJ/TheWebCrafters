@@ -59,14 +59,34 @@
                         <label for="sneakerModel">Sneaker Model</label>
                         <select id="sneakerModel" name="sneakerModel" required>
                             <option value="">Select your sneaker</option>
-                            <option value="jordan1">Air Jordan 1 Retro High</option>
-                            <option value="travis-jordan">Travis Scott x Air Jordan 1</option>
-                            <option value="dior-jordan">Dior x Air Jordan 1 High</option>
-                            <option value="yeezy-350">Yeezy Boost 350 V2</option>
-                            <option value="yeezy-zebra">Yeezy Boost 350 V2 Zebra</option>
-                            <option value="offwhite-max">Off-White x Nike Air Max 90</option>
-                            <option value="fragment-jordan">Fragment x Air Jordan 1</option>
-                            <option value="travis-dunk">Travis Scott x Nike SB Dunk</option>
+                            <optgroup label="Running Collection">
+                                <option value="jordan-runner-pro">Jordan Runner Pro</option>
+                                <option value="jordan-runner-elite">Jordan Runner Elite</option>
+                                <option value="jordan-runner-max">Jordan Runner Max</option>
+                                <option value="jordan-runner-sport">Jordan Runner Sport</option>
+                                <option value="jordan-runner-limited">Jordan Runner Limited</option>
+                            </optgroup>
+                            <optgroup label="Walking Collection">
+                                <option value="cloudstep-horizon">CloudStep Horizon</option>
+                                <option value="velocity-crimson">Velocity Crimson</option>
+                                <option value="ecostride-emerald">EcoStride Emerald</option>
+                                <option value="luxe-amethyst">Luxe Amethyst</option>
+                                <option value="solarflare-elite">SolarFlare Elite</option>
+                            </optgroup>
+                            <optgroup label="Streetwear Collection">
+                                <option value="urban-street-pro">Urban Street Pro</option>
+                                <option value="urban-street-elite">Urban Street Elite</option>
+                                <option value="urban-street-max">Urban Street Max</option>
+                                <option value="urban-street-luxury">Urban Street Luxury</option>
+                                <option value="urban-street-limited">Urban Street Limited</option>
+                            </optgroup>
+                            <optgroup label="Hiking Collection">
+                                <option value="trail-master-pro">Trail Master Pro</option>
+                                <option value="mountain-explorer">Mountain Explorer</option>
+                                <option value="alpine-trekker">Alpine Trekker</option>
+                                <option value="summit-climber">Summit Climber</option>
+                                <option value="peak-performance">Peak Performance</option>
+                            </optgroup>
                         </select>
                     </div>
 
@@ -93,7 +113,7 @@
                     </div>
 
                     <div class="estimated-value">
-                        <h3>Estimated Buy-Back Value: <span id="estimatedValue">$0</span></h3>
+                        <h3>Estimated Buy-Back Value: <span id="estimatedValue">R0</span></h3>
                         <p>Final value determined after inspection</p>
                     </div>
 
@@ -171,14 +191,30 @@
     <script>
         // Buy-back value calculator
         const sneakerValues = {
-            'jordan1': 2450,
-            'travis-jordan': 4100,
-            'dior-jordan': 12500,
-            'yeezy-350': 890,
-            'yeezy-zebra': 1890,
-            'offwhite-max': 3200,
-            'fragment-jordan': 5800,
-            'travis-dunk': 6500
+            // Running Collection
+            'jordan-runner-pro': 2100,
+            'jordan-runner-elite': 2300,
+            'jordan-runner-max': 2750,
+            'jordan-runner-sport': 2000,
+            'jordan-runner-limited': 3000,
+            // Walking Collection
+            'cloudstep-horizon': 1550,
+            'velocity-crimson': 1750,
+            'ecostride-emerald': 1650,
+            'luxe-amethyst': 1950,
+            'solarflare-elite': 2000,
+            // Streetwear Collection
+            'urban-street-pro': 950,
+            'urban-street-elite': 1150,
+            'urban-street-max': 1300,
+            'urban-street-luxury': 1200,
+            'urban-street-limited': 1100,
+            // Hiking Collection
+            'trail-master-pro': 1650,
+            'mountain-explorer': 1890,
+            'alpine-trekker': 1750,
+            'summit-climber': 2000,
+            'peak-performance': 1950
         };
 
         const conditionMultipliers = {
@@ -197,9 +233,9 @@
                 const multiplier = conditionMultipliers[condition] || 0;
                 const estimatedValue = Math.round(baseValue * multiplier);
                 
-                document.getElementById('estimatedValue').textContent = `$${estimatedValue.toLocaleString()}`;
+                document.getElementById('estimatedValue').textContent = `R${estimatedValue.toLocaleString()}`;
             } else {
-                document.getElementById('estimatedValue').textContent = '$0';
+                document.getElementById('estimatedValue').textContent = 'R0';
             }
         }
 
@@ -209,7 +245,15 @@
         // Form submission
         document.getElementById('buybackForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Buy-back request submitted! You will receive a confirmation email shortly.');
+            
+            if (!isUserLoggedIn()) {
+                window.location.href = 'login.html?redirect=buyback.html';
+                return;
+            }
+            
+            // User is logged in, process the form
+            alert('Buy-back request submitted successfully! You will receive a confirmation email shortly.');
+            window.location.href = 'index.html';
         });
         
         function isUserLoggedIn() {

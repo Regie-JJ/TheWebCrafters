@@ -155,16 +155,23 @@
                 return;
             }
 
-            orderItemsDiv.innerHTML = cartItems.map(item => `
-                <div class="order-item">
-                    <div class="item-details">
-                        <h4>${item.name}</h4>
-                        <p>${item.brand}</p>
-                        <span class="quantity">Qty: ${item.quantity || 1}</span>
+            orderItemsDiv.innerHTML = cartItems.map(item => {
+                const quantity = item.quantity || 1;
+                const itemTotal = item.price * quantity;
+                return `
+                    <div class="order-item">
+                        <div class="item-details">
+                            <h4>${item.name}</h4>
+                            <p>${item.brand}</p>
+                            <span class="quantity">Qty: ${quantity}</span>
+                        </div>
+                        <div class="item-pricing">
+                            <div class="unit-price">R${item.price.toLocaleString()} each</div>
+                            <div class="item-total">R${itemTotal.toLocaleString()}</div>
+                        </div>
                     </div>
-                    <div class="item-price">$${item.price.toLocaleString()}</div>
-                </div>
-            `).join('');
+                `;
+            }).join('');
         }
 
         function calculateTotals() {
@@ -172,9 +179,9 @@
             tax = Math.round(subtotal * 0.08); // 8% tax
             total = subtotal + tax;
 
-            document.getElementById('subtotal').textContent = `$${subtotal.toLocaleString()}`;
-            document.getElementById('tax').textContent = `$${tax.toLocaleString()}`;
-            document.getElementById('total').textContent = `$${total.toLocaleString()}`;
+            document.getElementById('subtotal').textContent = `R${subtotal.toLocaleString()}`;
+            document.getElementById('tax').textContent = `R${tax.toLocaleString()}`;
+            document.getElementById('total').textContent = `R${total.toLocaleString()}`;
         }
 
         function setupFormValidation() {
@@ -276,7 +283,7 @@
 
             // Show success modal
             document.getElementById('orderId').textContent = orderId;
-            document.getElementById('orderTotal').textContent = `$${total.toLocaleString()}`;
+            document.getElementById('orderTotal').textContent = `R${total.toLocaleString()}`;
             document.getElementById('successModal').style.display = 'flex';
         }
 

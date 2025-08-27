@@ -335,7 +335,7 @@
         </div>
         <div class="cart-footer">
             <div class="cart-total">
-                <strong>Total: $<span id="cartTotal">0</span></strong>
+                <strong>Total: R<span id="cartTotal">0</span></strong>
             </div>
             <button class="btn-primary full-width" onclick="checkout()">Checkout</button>
         </div>
@@ -465,16 +465,23 @@
             if (cart.length === 0) {
                 cartItems.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
             } else {
-                cartItems.innerHTML = cart.map(item => `
-                    <div class="cart-item">
-                        <div class="item-info">
-                            <h4>${item.name}</h4>
-                            <p>${item.brand}</p>
-                            <span class="item-price">$${item.price.toLocaleString()}</span>
+                cartItems.innerHTML = cart.map(item => {
+                    const itemTotal = item.price * item.quantity;
+                    return `
+                        <div class="cart-item">
+                            <div class="item-info">
+                                <h4>${item.name}</h4>
+                                <p>${item.brand}</p>
+                                <div class="item-pricing">
+                                    <span class="item-price">R${item.price.toLocaleString()}</span>
+                                    <span class="item-quantity">Qty: ${item.quantity}</span>
+                                    <span class="item-total">Total: R${itemTotal.toLocaleString()}</span>
+                                </div>
+                            </div>
+                            <button class="remove-item" onclick="removeFromCart(${item.id})">×</button>
                         </div>
-                        <button class="remove-item" onclick="removeFromCart(${item.id})">×</button>
-                    </div>
-                `).join('');
+                    `;
+                }).join('');
             }
         }
 
@@ -577,7 +584,7 @@
                         const name = card.querySelector('h3').textContent;
                         const brand = card.querySelector('.brand').textContent;
                         const priceText = card.querySelector('.current-price').textContent;
-                        const price = parseInt(priceText.replace(/[$,]/g, ''));
+                        const price = parseInt(priceText.replace(/[R$,]/g, ''));
                         
                         addToCart(name, price, brand);
                     });
